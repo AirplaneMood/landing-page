@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>[°•°] AIRPLANE • MOOD</title>
+    <title>✱[°•°]✱ AIRPLANE • MOOD ✱[°•°]✱</title>
     <style>
       * {
         box-sizing: border-box;
@@ -74,10 +74,11 @@
         }
 
         .main {
-          display: flex;
           align-items: center;
-          justify-content: center;
+          display: flex;
           height: 100%;
+          justify-content: center;
+          position: relative;
           width: 100%;
         }
 
@@ -88,13 +89,35 @@
           text-align: center;
         }
 
-        .main,
-        .main * {
+        .header,
+        .header * {
           cursor: default;
           touch-action: none;
           user-select: -moz-none;
           user-select: none;
         }
+
+        .contact-link {
+          cursor: pointer;
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 0;
+          z-index: 1;
+          bottom: 0;
+        }
+      }
+
+      .sr-only {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        padding: 0;
+        margin: -1px;
+        overflow: hidden;
+        clip: rect(0, 0, 0, 0);
+        white-space: nowrap;
+        border-width: 0;
       }
 
       .bold,
@@ -200,6 +223,9 @@
   </head>
   <body>
     <main class="main">
+      <a href="mailto:missions@airplanemood.io" class="contact-link"
+        ><strong class="sr-only">Hire us</strong></a
+      >
       <header class="header copy">
         <h1>
           <span class="firm"><em>Airplane</em> • <strong>Mood</strong></span>
